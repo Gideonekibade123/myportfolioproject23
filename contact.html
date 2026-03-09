@@ -29,7 +29,7 @@
     <body>
      
 
-  <form class="yourinfor">
+  <!-- <form class="yourinfor">
     <h1 class="head">Contact me</h1>
     <p class="head">If you have an 
       application you are interested in developing,<p class="yourinfor">a feature that you need to build or project that needs coding,</p>
@@ -48,6 +48,34 @@
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
 </div>
   <button type="submit" class="btn btn-primary">Submit</button>
+
+</form> -->
+
+
+<form action="https://formsubmit.co/gekibade@gmail.com" method="POST" class="yourinfor">
+
+<h1 class="head">Contact me</h1>
+
+<p>If you have an application you’d like to build, a feature you need developed, or a project that requires coding, I’d love to hear about it.
+   Let’s work together to turn your ideas into reality.</p>
+
+<div class="mb-3 col-8 w-50 mx-auto">
+<input type="text" name="name" class="form-control" placeholder="Your full name" required>
+</div>
+
+<div class="mb-3 col-8 w-50 mx-auto">
+<input type="email" name="email" class="form-control" placeholder="name@example.com" required>
+</div>
+
+<div class="mb-3 col-8 w-50 mx-auto">
+<label class="form-label">Write your message here</label>
+<textarea name="message" class="form-control" rows="5" required></textarea>
+</div>
+
+<!-- Prevent spam -->
+<input type="hidden" name="_captcha" value="false">
+
+<button type="submit" class="btn btn-primary">Submit</button>
 
 </form>
 
