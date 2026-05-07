@@ -10,10 +10,21 @@
 
 
   <style>
+
+.social-icon {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #0f172a ;
+}
+
+
     .yourinfor{
       text-align: center;
 
-       background-color: green;
+       background-color: grey;
     }
     
            
@@ -27,7 +38,17 @@
 
     </head>
     <body>
-     
+
+  <nav class="nav justify-content-end bg-light">
+  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+  <a class="nav-link" href="about.html">About</a>
+  <a class="nav-link" href="projects.html">Projects</a>
+  <a class="nav-link" href="contact.html">Contact</a>
+</nav>
+
+
+
+
 
 
 
@@ -54,10 +75,25 @@
 <!-- Prevent spam -->
 <input type="hidden" name="_captcha" value="false">
 
-<button type="submit" class="btn btn-primary">Submit</button>
+<button type="submit" class="btn btn-dark">Submit</button>
 
 </form>
 
+
+
+<footer>
+<div class="d-flex gap-3 fs-4 flex-wrap justify-content-center my-4">
+
+
+<a href="https://web.facebook.com/?_rdc=1&_rdr#" class="social-icon color-info"><i class="bi bi-facebook"></i></a>
+<a href="https://twitter.com" class="social-icon"><i class="bi bi-twitter"></i></a>
+<a href="https://instagram.com" class="social-icon"><i class="bi bi-instagram"></i></a>
+<a href="https://www.linkedin.com/in/gideon-e-a26843369" class="social-icon"><i class="bi bi-linkedin"></i></a>
+
+
+</div>
+<p class="mb-0 text-center" style="font-size: 13px; opacity: 0.7;">© 2025 Gideon Ekibade. All rights reserved.</p>
+</footer>
 
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
