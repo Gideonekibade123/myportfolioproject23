@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience | Gideon Ekibade</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #0a0a0a;
+        color: #f0f0f0;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      /* ── Navbar ── */
+      .navbar {
+        background-color: #111111;
+        border-bottom: 1px solid #222;
+      }
+      .navbar-brand img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .nav-link {
+        color: #ccc !important;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: #f0a500 !important;
+      }
+
+      /* ── Hero banner ── */
+      .experience-hero {
+        background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+        padding: 80px 0 50px;
+        text-align: center;
+        border-bottom: 1px solid #222;
+      }
+      .experience-hero h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #f0f0f0;
+      }
+      .experience-hero h1 span {
+        color: #f0a500;
+      }
+      .experience-hero p {
+        color: #aaa;
+        font-size: 1.1rem;
+        max-width: 520px;
+        margin: 12px auto 0;
+      }
+
+      /* ── Timeline ── */
+      .timeline-section {
+        padding: 70px 0;
+      }
+      .section-title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #f0f0f0;
+        margin-bottom: 40px;
+        position: relative;
+        display: inline-block;
+      }
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: #f0a500;
+        margin-top: 8px;
+        border-radius: 2px;
+      }
+
+      .exp-card {
+        background: #161616;
+        border: 1px solid #2a2a2a;
+        border-left: 4px solid #f0a500;
+        border-radius: 10px;
+        padding: 28px 30px;
+        margin-bottom: 30px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .exp-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(240, 165, 0, 0.1);
+      }
+
+      .exp-role {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #f0f0f0;
+        margin-bottom: 4px;
+      }
+      .exp-company {
+        font-size: 1rem;
+        color: #f0a500;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      .exp-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-bottom: 16px;
+      }
+      .exp-meta span {
+        font-size: 0.85rem;
+        color: #888;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .exp-badge {
+        background: rgba(240, 165, 0, 0.12);
+        color: #f0a500;
+        border: 1px solid rgba(240, 165, 0, 0.3);
+        border-radius: 20px;
+        padding: 3px 12px;
+        font-size: 0.78rem;
+        font-weight: 600;
+      }
+
+      .exp-card ul {
+        padding-left: 18px;
+        margin-bottom: 16px;
+      }
+      .exp-card ul li {
+        color: #bbb;
+        margin-bottom: 8px;
+        line-height: 1.6;
+      }
+
+      .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+      }
+      .tech-tag {
+        background: #1e1e1e;
+        border: 1px solid #333;
+        color: #ccc;
+        border-radius: 6px;
+        padding: 4px 12px;
+        font-size: 0.8rem;
+      }
+
+      /* ── Education ── */
+      .edu-card {
+        background: #161616;
+        border: 1px solid #2a2a2a;
+        border-left: 4px solid #4a90d9;
+        border-radius: 10px;
+        padding: 24px 28px;
+        margin-bottom: 20px;
+        transition: transform 0.2s;
+      }
+      .edu-card:hover {
+        transform: translateY(-3px);
+      }
+      .edu-title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #f0f0f0;
+        margin-bottom: 3px;
+      }
+      .edu-school {
+        color: #4a90d9;
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+      .edu-year {
+        color: #888;
+        font-size: 0.85rem;
+      }
+
+      /* ── Footer ── */
+      footer {
+        background: #111;
+        border-top: 1px solid #222;
+        padding: 30px 0;
+        text-align: center;
+        color: #555;
+        font-size: 0.9rem;
+      }
+      footer a {
+        color: #888;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 1.2rem;
+        transition: color 0.2s;
+      }
+      footer a:hover {
+        color: #f0a500;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ── Navbar ── -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="EkibadeGideon.jpg" alt="Gideon Logo" />
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-2">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="experience.html">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ── Hero ── -->
+    <section class="experience-hero">
+      <div class="container">
+        <h1>My <span>Experience</span></h1>
+        <p>Internships, education, and certifications that have shaped my journey as a developer.</p>
+      </div>
+    </section>
+
+    <!-- ── Work Experience ── -->
+    <section class="timeline-section">
+      <div class="container">
+        <h3 class="section-title">Work Experience</h3>
+
+        <!-- Stanix Consulting -->
+        <div class="exp-card">
+          <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-1">
+            <div>
+              <p class="exp-role">Frontend Developer Intern</p>
+              <p class="exp-company">
+                <i class="bi bi-building"></i> Stanix Consulting
+              </p>
+            </div>
+            <span class="exp-badge">Current</span>
+          </div>
+
+          <div class="exp-meta">
+            <span><i class="bi bi-calendar3"></i> June 2026 – Present</span>
+            <span><i class="bi bi-geo-alt"></i> Lagos, Nigeria (Hybrid)</span>
+          </div>
+
+          <ul>
+            <li>Building <strong>FadeHaus</strong>, a barbershop web application using React and Vite as part of a collaborative team under the Stanix-Cohort GitHub organisation.</li>
+            <li>Implemented a sticky navbar, lazy loading, and WebP image optimization to improve page performance.</li>
+            <li>Integrated WhatsApp booking functionality, allowing customers to book appointments directly from the site.</li>
+            <li>Developed a fully styled Services & Pricing page with dynamic service cards.</li>
+            <li>Collaborated using Jira for task tracking, Confluence for documentation, and a structured Git branching workflow.</li>
+          </ul>
+
+          <div class="tech-tags">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Vite</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Bootstrap</span>
+            <span class="tech-tag">Git & GitHub</span>
+            <span class="tech-tag">Jira</span>
+            <span class="tech-tag">Confluence</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Education & Certifications ── -->
+    <section class="pb-5">
+      <div class="container">
+        <h3 class="section-title">Education & Certifications</h3>
+
+        <div class="edu-card">
+          <p class="edu-title">Diploma in Information Technology</p>
+          <p class="edu-school">NIIT</p>
+          <p class="edu-year"><i class="bi bi-patch-check-fill text-info me-1"></i>Certified</p>
+        </div>
+
+        <div class="edu-card">
+          <p class="edu-title">Full-Stack Web Development</p>
+          <p class="edu-school">Torilo Academy</p>
+          <p class="edu-year"><i class="bi bi-patch-check-fill text-info me-1"></i>Certified</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Footer ── -->
+    <footer>
+      <div class="mb-3">
+        <a href="https://www.linkedin.com/in/gideon-e-a26843369" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Gideonekibade123" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.facebook.com/share/1LrVxwAgwT/" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+      </div>
+      <p>© 2025 Gideon Ekibade. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
