@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home</title>
+<title>Home | Gideon Ekibade</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -16,26 +16,23 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .social-icon {
-  color: #22c55e;
+  color: #888;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .social-icon:hover {
-  color: #2563eb;
+  color: #f0a500;
 }
 
 .head {
   text-align: center;
-}
-
-.yourinfor {
-  background-color: lightcyan;
-  padding: 40px 15px;
 }
 
 img {
@@ -51,49 +48,139 @@ img {
   max-width: 600px;
   margin: auto;
 }
+
+/* ── Navbar ── */
+.navbar {
+  background-color: #111111;
+  border-bottom: 1px solid #222;
+}
+
+.navbar-brand img,
+.nav-logo {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover,
+.nav-logo:hover {
+  transform: scale(1.15);
+}
+
+.nav-link {
+  color: #ccc !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #f0a500 !important;
+}
+
+/* ── Hero ── */
+.hero-section {
+  background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+  border-bottom: 1px solid #222;
+}
+
+.hero-text h1 {
+  color: #f0f0f0;
+}
+
+.hero-text h1.accent {
+  color: #f0a500;
+}
+
+.hero-text .lead {
+  color: #aaa;
+}
+
+.hero-text h4 {
+  color: #f0a500 !important;
+  font-weight: 700;
+}
+
+/* ── About section ── */
+.about-section h2 {
+  color: #f0f0f0;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.about-section p {
+  color: #bbb;
+  line-height: 1.7;
+}
+
+.about-section h5.text-info {
+  color: #f0a500 !important;
+  font-weight: 700;
+}
+
+.tech-stack h5 {
+  color: #f0f0f0;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.tech-stack p {
+  color: #bbb;
+}
+
+.tech-stack strong {
+  color: #f0f0f0;
+}
+
+/* ── Footer ── */
+footer {
+  border-top: 1px solid #222;
+}
+
+footer p {
+  color: #555;
+}
 </style>
 </head>
 
 <body>
 
 <!-- MAIN WRAPPER -->
-<div class="min-vh-100 w-100 p-2 p-lg-4" style="background-color:#f8fafc; border:2px solid #f8f9fa;">
+<div class="min-vh-100 w-100 p-2 p-lg-4">
 
-<header class="rounded-5">
+<header class="hero-section rounded-4">
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg rounded-4">
 <div class="container-fluid">
 
 <a href="Ekibade Gideon (1 of 4).jpg" target="_blank">
-  <img src="EkibadeGideon.jpg" alt="Mylogo" style="width:70px; height:70px; border-radius:60%;">
+  <img src="EkibadeGideon.jpg" alt="Mylogo" class="nav-logo" style="width:70px; height:70px; border-radius:60%;">
 </a>
 
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-<span class="navbar-toggler-icon"></span>
+<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+<span class="navbar-toggler-icon" style="filter: invert(1);"></span>
 </button>
 
 <div class="collapse navbar-collapse" id="navmenu">
-<ul class="navbar-nav ms-auto">
+<ul class="navbar-nav ms-auto gap-2">
 
 <li class="nav-item">
-<a class="nav-link active text-success" href="index.html">Home</a>
+<a class="nav-link active" href="index.html">Home</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link text-success" href="about.html">About</a>
+<a class="nav-link" href="about.html">About</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link text-success" href="experience.html">Experience</a>
+<a class="nav-link" href="experience.html">Experience</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link text-success" href="projects.html">Projects</a>
+<a class="nav-link" href="projects.html">Projects</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link text-success" href="contact.html">Contact</a>
+<a class="nav-link" href="contact.html">Contact</a>
 </li>
 
 </ul>
@@ -107,14 +194,14 @@ img {
 
 <div class="hero-text px-2 px-lg-0">
 
-<h1 class="display-5">I’m Gideon.</h1>
+<h1 class="display-5">I'm <span class="accent">Gideon</span>.</h1>
 <h1 class="display-6">Full-Stack Developer (React & Django)</h1>
 
 <p class="lead">
 I build scalable e-commerce and real-world web applications with secure payments and admin dashboards.
 </p>
 
-<h4 class="text-info">LET’S CONNECT</h4>
+<h4>LET'S CONNECT</h4>
 
 <div class="d-flex gap-3 fs-4 flex-wrap justify-content-center justify-content-lg-start">
 
@@ -140,7 +227,7 @@ I build scalable e-commerce and real-world web applications with secure payments
 </main>
 
 <!-- ABOUT SECTION -->
-<div class="container mt-5">
+<div class="container mt-5 about-section">
 
 <div class="row g-4">
 
@@ -166,7 +253,7 @@ View My Resume
 
 </div>
 
-<div class="col-lg-4 col-12">
+<div class="col-lg-4 col-12 tech-stack">
 
 <h5>Tech Stack</h5>
 
